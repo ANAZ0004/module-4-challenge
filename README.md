@@ -33,3 +33,31 @@ In this challenge, you'll create a two-page website where users will input and v
   - [ ] THEN I can see the title, the content, and the author of the post.
 - WHEN I view the footer
   - [ ] THEN I am presented with a link to the developer's portfolio.
+
+## File Structure
+
+my-blog
+
+├── assets
+
+│   ├── css
+
+│   │   ├── blog.css
+
+│   │   ├── form.css
+
+│   │   └── styles.css
+
+│   └── js
+
+│       ├── blog.js
+
+│       ├── form.js
+
+│       └── logic.js
+
+├── index.html
+
+├── blog.html
+
+└── README.md

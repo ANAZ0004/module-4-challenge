@@ -1,0 +1,118 @@
+/* Normalising styles */
+body {
+    font-family: 'Tahoma', sans-serif;
+    font-size: 16px;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .byline {
+    font-weight: 200;
+    font-style: italic;
+  }
+
+/* Variables */
+:root {
+    /* Colors sourced from: https://projectblurple.com (Discord standard colours) */
+    --blurple: rgb(88, 101, 242);
+    --dark-blurple: rgb(69, 79, 191);
+    --white: rgb(255, 255, 255);
+    --not-quite-black: rgb(35, 39, 42);
+    --alt-blurple: rgb(114, 137, 218);
+    --alt-dark: rgb(78, 93, 148);
+    /* Colors sourced from: https://shorturl.at/pFw0l (basic orange pastel) */
+    --dark-orange: #fd9a4d;
+    --orange: #fcb274;
+    --light-orange: #fbca9a;
+    --dark-yellow: #fcdfaa;
+    --light-yellow: #fcf3b0;
+}
+
+/* Styles shared between pages */
+header {
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header h1 {
+    width: 50%;
+    font-size: 250%;
+}
+
+nav {
+    width: 40%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap:25px;
+}
+
+.nav-item {
+    display: flex;
+    padding:5px;
+}
+/* I got rid of the transitions because they cause unwanted flashing */
+/* Light mode properties (inverse of dark-mode) */
+.toggleable {
+    background-color: var(--light-yellow);
+    color: var(--dark-orange);
+    /* transition: all 0.5s linear; */
+
+header {
+    border-bottom: 3px solid var(--light-orange);
+    /* transition: all 0.5s linear; */
+}
+.nav-item a:link, .nav-item a:visited {
+    color: var(--dark-orange);
+    text-decoration: none;
+    /* transition: all 0.5s linear; */
+}
+.nav-item a:hover {
+    color: var(--orange);
+    border-bottom: 3px solid var(--orange);
+}
+}
+
+/* Dark mode class which overrides light mode properties */
+.dark-mode {
+    background-color: var(--not-quite-black);
+    color: var(--alt-blurple);
+    /* transition: all 0.5s linear; */
+
+header {
+    border-bottom: 3px solid var(--dark-blurple);
+    /* transition: all 0.5s linear; */
+}
+.nav-item a:link, .nav-item a:visited {
+    color: var(--dark-blurple);
+    text-decoration: none;
+    /* transition: all 0.5s linear; */
+}
+.nav-item a:hover {
+    color: var(--blurple);
+    border-bottom: 3px solid var(--blurple);
+}
+}
+
+#brightness-toggle {
+    max-height:40px;
+}
+
+#hero-image {
+    max-width: 50%;
+    padding:5px;
+}
